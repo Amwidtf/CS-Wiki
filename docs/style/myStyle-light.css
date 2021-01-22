@@ -1,12 +1,43 @@
 a {
     text-decoration: none;
+    color: #3eaf7c
+}
+.advertisement {
+    position: fixed;
+    right: 20px;
+    top: 100px;
+    width: 110px;
+    box-shadow: -1px 0 2px 0px #c5ebda;
+    padding: 10px;
+    z-index: 99;
+    background-color: #fff;
+    text-align: center;
+}
+.badge.green[data-v-73ca276e], .badge.tip[data-v-73ca276e], .badge[data-v-73ca276e] {
+    background-color: #42b983;
+}
+.badge.warn[data-v-73ca276e], .badge.warning[data-v-73ca276e], .badge.yellow[data-v-73ca276e] {
+    background-color: #e7c000;
+}
+.badge.recommendation[data-v-73ca276e] {
+    background-color: #dd4a82;
+}
+.badge[data-v-73ca276e] {
+    display: inline-block;
+    font-size: 14px;
+    height: 18px;
+    line-height: 18px;
+    border-radius: 3px;
+    padding: 0 6px;
+    color: #fff;
 }
 body{
-    font-family: "Helvetica Neue",Helvetica,"Hiragino Sans GB","Microsoft YaHei",Arial,sans-serif;   
-    word-spacing:1px; /*更改默认的词间距*/
-    letter-spacing:1px;/*更改默认的字符间距*/ 
-    /* background:rgb(255, 255, 255); */
-
+    /* font-family: "Helvetica Neue",Helvetica,"Hiragino Sans GB","Microsoft YaHei",Arial,sans-serif;    */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Fira Sans", "Droid Sans", "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    font-size: 16px;
+    color: #2c3e50;
 }
 /* 置顶插件 */
 .to-top {
@@ -22,17 +53,9 @@ section.cover .cover-main {
     z-index:10 !important;
 }
 /* 导航栏 */
-/* .app-nav {
-    margin: 20px 60px 0 0 !important;
-} */
-/* 导航栏字体颜色 */
-/* .app-nav ul, .app-nav li {
-    color: #eee !important;
-} */
-/* 导航栏下拉框背景 */
-/* .app-nav li ul {
-    background-color: rgb(68, 68, 68) !important;
-} */
+.app-nav {
+    position: fixed !important;
+}
 /* 内容居中和宽度 */
 .content{
     width:1000px;
@@ -60,6 +83,7 @@ section.cover .cover-main {
     color: rgb(173, 141, 229);
     
 }
+
 /* 搜索框 */
 /* .search {
     border-bottom: 1px solid rgb(68,68,68) !important;
@@ -76,6 +100,10 @@ section.cover .cover-main {
 /* .sidebar{
     background:rgb(51, 51, 51);
 } */
+
+.sidebar ul {
+    margin: 0 0 0 25px !important;
+}
 /* 侧边栏字体颜色 */
 .sidebar ul li a {
     /* color: rgb(222, 222, 222); */
@@ -87,7 +115,6 @@ section.cover .cover-main {
     font-weight:400 !important;
     font-size:14px !important;
 }
-
 .sidebar ul li.active > a {
     color: rgb(66, 185, 163);
 } 
@@ -128,6 +155,20 @@ h1 span{
     font-weight: bold;
 }
 
+/* 无序列表 */
+/* .markdown-section ul {
+    list-style-type:none;
+    padding:0px;
+    margin:0px;
+}
+.markdown-section ul li {
+    background-image:url("https://gitee.com/veal98/images/raw/master/img/圆点.png");
+    background-size: 12px 12px;
+	background-repeat:no-repeat;
+	background-position:0px 8px; 
+	padding-left:20px;
+} */
+
 
 /* 封面半透明遮盖 */
 section.cover.has-mask .mask {
@@ -142,6 +183,7 @@ section.cover.has-mask .mask {
 /* 加粗 */
 .markdown-section strong {
     color: rgb(115, 143, 205);
+    font-weight: bolder;
 }
 /* a 标签 */
 .markdown-section a {
@@ -150,8 +192,20 @@ section.cover.has-mask .mask {
 }
 /* 表格 */
 .markdown-section tr:nth-child(2n) {
-    background-color: rgb(51, 51, 51);
+    background-color: rgb(248, 248, 248);
 }
+.markdown-section thead{
+    background: rgb(248, 248, 248) !important;
+}
+.markdown-section table {
+    border-collapse: collapse;
+    border-spacing: 0;
+    margin-bottom: 1rem;
+    display: table !important;
+    overflow: auto;
+    width: 100%;
+}
+
 /* 引用块 */
 .markdown-section blockquote{
     background: rgb(220, 220, 255);
@@ -167,7 +221,7 @@ section.cover.has-mask .mask {
 .markdown-section pre:before {
     content: '';
     display: block;
-    background: url(https://my-wechat.mdnice.com/point.png);
+    background: url(https://files.mdnice.com/point.png);
     height: 30px;
     width: 100%;
     background-size: 40px;
